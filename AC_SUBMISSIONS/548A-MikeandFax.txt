@@ -1,0 +1,47 @@
+/*
+	SubmissionId	:	17326131
+	ContestId	:	548
+	Index	:	A
+	ProblemName	:	Mike and Fax
+	ProblemTags	:	['brute force', 'implementation']
+	ProgrammingLanguage	:	GNU C11
+	Verdict	:	OK
+*/
+
+#include<string.h>
+#include<stdio.h>
+int main()
+{
+	char p[1001],a[1001];
+	scanf("%s",p);
+	long long int l,i,j,k,m,cnt=0;
+	scanf("%lld",&k);
+	l=strlen(p);
+	if(l%k!=0)
+	{
+		printf("NO");
+		return 0;
+	}
+	char c[(l/k)+1];
+	for(i=0;i<l;i+=(l/k))
+	{
+		m=0;
+		for(j=i;j<(i+(l/k));j++)
+		{
+			c[m]=p[j];
+			m+=1;
+		}
+		c[l/k]='\0';
+		strrev(c);
+		if(i==0)
+		strcpy(a,c);
+		else
+		strcat(a,c);
+		//printf("%s\n",a);		
+	}	
+	if(strcmp(p,a)==0)
+		printf("YES");
+	else
+		printf("NO");
+	return 0;
+}

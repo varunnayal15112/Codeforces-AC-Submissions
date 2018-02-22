@@ -1,0 +1,23 @@
+/*
+	SubmissionId	:	17519823
+	ContestId	:	664
+	Index	:	A
+	ProblemName	:	Complicated GCD
+	ProblemTags	:	['math']
+	ProgrammingLanguage	:	GNU C11
+	Verdict	:	OK
+*/
+
+#include<stdio.h>
+#include<string.h>
+#define p 10^100
+int main(){
+    char a[p],b[p];
+    scanf("%s",a);
+    scanf("%s",b);
+    if(strcmp(a,b)==0)
+    printf("%s",a);
+    else
+    printf("1");
+    return 0;
+}
