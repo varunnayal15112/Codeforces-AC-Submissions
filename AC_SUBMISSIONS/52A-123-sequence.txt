@@ -1,0 +1,33 @@
+/*
+	SubmissionId	:	16268721
+	ContestId	:	52
+	Index	:	A
+	ProblemName	:	123-sequence
+	ProblemTags	:	['implementation']
+	ProgrammingLanguage	:	GNU C
+	Verdict	:	OK
+*/
+
+#include<stdio.h>
+int main()
+{
+	long long int n,i,j,o=0,w=0,t=0;
+	scanf("%lld",&n);
+	for(i=0;i<n;i++)
+	{
+		scanf("%lld",&j);
+		if(j==1)
+		o+=1;
+		else if(j==2)
+		w+=1;
+		else t+=1;	
+	}
+	if(o>=w&&o>=t)
+	printf("%lld",w+t);
+	else if(w>=o&&w>=t)
+	printf("%lld",o+t);
+	else if(t>=w&&t>=o)
+	printf("%lld",w+o);
+
+	return 0;
+}
